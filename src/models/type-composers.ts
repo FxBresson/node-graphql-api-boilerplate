@@ -1,5 +1,3 @@
-import { ExampleTC } from './Example/type-composer'
+import { ExampleTC } from './Example/type-composer';
 
-export {
-  ExampleTC
-}
+export { ExampleTC };

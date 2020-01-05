@@ -1,5 +1,3 @@
-import { ExampleSchema } from "./Example"
+import { ExampleSchema } from './Example';
 
-export {
-  ExampleSchema
-}
+export { ExampleSchema };
