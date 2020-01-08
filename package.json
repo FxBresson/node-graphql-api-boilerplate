@@ -7,11 +7,10 @@
     "start": "npm run dev",
     "serve": "node build/bundle.js",
     "build": "webpack --env.prod --progress",
-    "dev:wp": "webpack --env.dev",
-    "watch-ts": "tsc -w",
-    "watch-node": "nodemon build/bundle.js",
-    "dev": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --env.dev",
+    "node:watch": "nodemon build/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node ./scripts/generate"
   },
   "author": "Francois-Xavier Bresson",
   "license": "MIT",
@@ -20,7 +19,7 @@
     "@types/mongoose": "^5.5.32",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
-    "concurrently": "^5.0.0",
+    "chalk": "^3.0.0",
     "dotenv-webpack": "^1.7.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -33,7 +32,9 @@
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "webpack-shell-plugin": "^0.5.0",
+    "yargs": "^15.0.0"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
